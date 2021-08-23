@@ -1,0 +1,22 @@
+<h1>Tus tarjetas</h1>
+<table class="table container">
+  <thead>
+    <tr>
+      <th scope="col">Numero tarjeta</th>
+      <th scope="col">Codigo seguridad</th>
+      <th scope="col">Fecha expiración</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of informacion">
+    <tr>
+      <td>{{ item.numero_tarjeta }}</td>
+      <td>{{ item.security_code }}</td>
+      <td>{{ item.fecha_exp }}</td>
+      <td>
+        <a href="" class="btn btn-danger border border-3">Eliminar</a>
+      </td>
+    </tr>
+  </tbody>
+  <button  routerLink="/guardar" class="btn btn-primary">Agregar tarjeta</button>
+</table>
